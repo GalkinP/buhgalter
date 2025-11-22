@@ -1,0 +1,79 @@
+.calendar {
+  background: #2c3e50; /* тот же фон, что у футера */
+  color: #ecf0f1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem; /* ещё меньше шрифт */
+  max-width: 180px;   /* компактная ширина */
+  margin: 0 auto;
+}
+
+.calendar h4 {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+/* сетка дней */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem; /* только отступы, без рамок */
+}
+
+.weekday {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.2rem;
+  background: transparent; /* убираем серый фон */
+  color: #bdc3c7; /* светло-серый для гармонии */
+}
+
+.day {
+  text-align: center;
+  padding: 0.4rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.day:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* рабочие и выходные */
+.workday {
+  background: transparent;
+  color: #ecf0f1;
+}
+
+.holiday {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.today {
+  background: rgba(22, 160, 133, 0.3);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* легенда */
+.legend {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #bdc3c7;
+}
+
+.workday-box, .holiday-box, .today-box {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0.3rem;
+  border-radius: 2px;
+}
+.workday-box { background: transparent; border: 1px solid #bdc3c7; }
+.holiday-box { background: rgba(231, 76, 60, 0.4); }
+.today-box   { background: rgba(22, 160, 133, 0.4); }

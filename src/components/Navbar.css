@@ -1,0 +1,103 @@
+/* Всегда сверху, независим от родителя */
+.navbar {
+  position: fixed; /* надежнее чем sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 64px; /* зафиксируй, чтобы задать отступ контенту */
+  padding: 0 1rem;
+
+  background: #fdfdfd;
+  border-bottom: 2px solid #ccc;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Лого слева */
+.logo {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+/* Горизонтальные ссылки (десктоп) */
+.tabs {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs li a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #eaeaea;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+.tabs li a:hover {
+  background: #dcdcdc;
+}
+
+/* Бургер-кнопка — только на мобильных */
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    opacity: 100%;
+  }
+
+  /* Прячем горизонтальное меню, показываем выпадающее */
+  .tabs {
+    display: none;
+    flex-direction: column;
+
+    position: absolute; /* привязано к navbar */
+    top: 64px; /* сразу под navbar */
+    right: 0;
+
+    width: min(280px, 92vw);
+    padding: 1rem;
+    margin: 0;
+
+    background: #fdfdfd;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+  }
+
+  .tabs.open {
+    display: flex;
+  }
+
+  .tabs li a {
+    border-radius: 6px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    background: #fff;
+  }
+
+  .tabs li:last-child a {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}

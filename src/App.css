@@ -1,0 +1,16 @@
+/* Поток страницы + отступ под fixed navbar */
+.app {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ВАЖНО: отступ равен высоте navbar, чтобы контент не прятался под ним */
+.main {
+  padding-top: 64px; /* подстрой под реальную высоту navbar */
+}
+
+/* Глобальная адаптация для контента */
+@media (max-width: 768px) {
+  .main { padding-top: 64px; }
+}
