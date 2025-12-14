@@ -1,16 +1,28 @@
-/* Поток страницы + отступ под fixed navbar */
+/* Основной контейнер */
 .app {
   min-height: 100%;
   background: var(--bg);
   color: var(--text);
+  display: flex;
+  flex-direction: column;
 }
 
-/* ВАЖНО: отступ равен высоте navbar, чтобы контент не прятался под ним */
+/* Контент с отступом под фиксированный navbar */
 .main {
+  flex: 1;
   padding-top: 64px; /* подстрой под реальную высоту navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/* Глобальная адаптация для контента */
+/* Адаптация для мобильных */
 @media (max-width: 768px) {
-  .main { padding-top: 64px; }
+  .main {
+    padding-top: 64px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
+

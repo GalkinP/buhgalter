@@ -1,32 +1,19 @@
 # --- Этап 1: сборка фронта ---
-FROM node:22 AS build
+FROM node:22-alpine
 
+
+# 2. Рабочая директория внутри контейнера
 WORKDIR /app
 
-# Установим зависимости
-COPY package.json package-lock.json* ./
-RUN npm install
+# 3. Копируем package.json и устанавливаем зависимости
+COPY package*.json ./
+RUN npm install --production
 
-# Скопируем исходники
-COPY  . .
+# 4. Копируем весь проект
+COPY . .
 
-
-# Соберём фронт
-RUN npm run build
-
-# --- Этап 2: сервер + готовый фронт ---
-FROM node:22
-
-WORKDIR /app
-
-RUN npm install -g serve
-
-
-# Скопируем собранный фронт
-COPY --from=build /app/dist ./dist
-
-
-# Запускаем сервер
-CMD ["serve", "-s", "dist", "-l", "3000"]
-
+# 5. Указываем порт
 EXPOSE 3000
+
+# 6. Запуск сервера
+CMD ["node", "server.js"]

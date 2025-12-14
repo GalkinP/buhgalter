@@ -1,74 +1,152 @@
 .hero {
-  position: relative;
   padding: 6rem 2rem;
-  text-align: left;
-  background: url("../assets/image.png") center/cover no-repeat;
-  border-bottom: 2px solid #000;
+  background: var(--bg);
+  border-bottom: 2px solid var(--accent);
   font-family: "Roboto", sans-serif;
-  color: #000;
-}
-
-.hero-overlay {
-  padding: 3rem;
-  border-radius: 12px;
-  display: inline-block;
 }
 
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  max-width: 900px;
+  justify-content: space-between;
+  gap: 0.5rem;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
-.hero-logo {
-  max-width: 140px;
-  height: auto;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+.hero-text {
+  flex: 1;
+  position: relative;
+  z-index:9;
+  margin-right: -19rem; 
+  background: rgba(255, 255, 255, 0);
+  padding: 2rem 1.5rem;
+  padding-left: 3rem;
+  /* padding-right: 1.3rem; */
+  border-radius: 12px;
+  box-shadow: none;
+  /* backdrop-filter: blur(4px); */
 }
-
 .hero-text h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #000;
+  font-size: 3rem;
 }
 
 .hero-text p {
-  font-size: 1.3rem;
-  color: #2e4656;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.hero-text .shadow {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: -1;
+  /* box-shadow: inset 0 -8px 42px 1px rgba(120, 120, 118, 0.337); */
+  /* box-shadow: 0 4px 12px 6px  rgba(115, 115, 115, 0.627); */
+}
+
+.hero-text .shadow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* left: 0; */
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0,rgba(0, 0, 0, 0) 70%
+  );
+  /* background: linear-gradient(to left, rgba(255, 255, 255, 0) 0, var(--bg) 90%); */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  z-index: 5;
+}
+
+/* обёртка с градиентом справа */
+.image-fade {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* box-shadow: 0 1px 12px 2px  rgba(115, 115, 115, 0.627) */
+}
+
+.image-fade::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0, var(--bg) 90%);
+  pointer-events: none;
+  z-index: 7;
+   /* margin-left: -6rem */
+}
+
+.image-fade img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 4rem 1rem;
-    text-align: center;
-    background-position: center;
+   .hero{
+  padding: 4.5rem 1rem 0rem 1rem;
   }
+}
 
-  .hero-overlay {
-    padding: 2rem;
-  }
-
+@media (max-width: 425px) {
   .hero-content {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 640px;
+    text-align: center;
   }
 
-  .hero-logo {
-    max-width: 120px;
-    margin-bottom: 0.5rem;
+  .hero-text {
+    margin-right: 0;
+    box-shadow: none;
+    
+  }
+
+  .hero-text .shadow {
+    display: none;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
+
   .hero-text p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin: 0 auto;
+  }
+
+  .image-fade::after {
+    display: none;
+  }
+
+  .image-fade img {
+    display: none;
+  }
+  .hero{
+  padding: 2rem 1rem 0rem 1rem;
   }
 }

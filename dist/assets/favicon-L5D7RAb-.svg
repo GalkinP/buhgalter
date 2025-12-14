@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- фон с рамкой -->
+  <rect width="64" height="64" fill="white" stroke="black" stroke-width="2"/>
+
+  <!-- блокнот -->
+  <rect x="6" y="10" width="20" height="44" rx="2" fill="white" stroke="black" stroke-width="2"/>
+  <line x1="10" y1="16" x2="22" y2="16" stroke="black" stroke-width="1"/>
+  <line x1="10" y1="22" x2="22" y2="22" stroke="black" stroke-width="1"/>
+  <line x1="10" y1="28" x2="22" y2="28" stroke="black" stroke-width="1"/>
+  <line x1="10" y1="34" x2="22" y2="34" stroke="black" stroke-width="1"/>
+  <line x1="10" y1="40" x2="22" y2="40" stroke="black" stroke-width="1"/>
+
+  <!-- калькулятор -->
+  <rect x="36" y="14" width="22" height="30" rx="3" fill="white" stroke="black" stroke-width="2"/>
+  <rect x="40" y="18" width="14" height="6" fill="black" stroke="black" stroke-width="1"/>
+  <!-- кнопки -->
+  <rect x="40" y="28" width="6" height="6" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="48" y="28" width="6" height="6" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="40" y="36" width="6" height="6" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="48" y="36" width="6" height="6" fill="white" stroke="black" stroke-width="1"/>
+
+  <!-- карандаш -->
+  <polygon points="20,54 28,50 44,60 36,64" fill="white" stroke="black" stroke-width="2"/>
+  <polygon points="44,60 46,62 42,64 36,64" fill="black" stroke="black" stroke-width="1"/>
+</svg>

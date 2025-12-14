@@ -8,6 +8,7 @@ export default function ContactForm() {
     message: "",
   });
   const [status, setStatus] = useState("");
+  console.log ('me')
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -48,18 +49,18 @@ export default function ContactForm() {
           <i className="fab fa-telegram"></i> Telegram
         </a>
         <a
-          href="https://wa.me/79500078233"
+          href="https://wa.me/79006497681"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-whatsapp"></i> WhatsApp
         </a>
-        <a href="tel:+79500078233">
+        <a href="tel:+79006497681">
           <i className="fas fa-phone"></i> Позвонить
         </a>
       </div>
 
-      <p className="alt-text">или можете связаться с нами по форме:</p>
+      <p className="alt-text">Получите бесплатную консультацию и узнайте,<br/> как мы можем оптимизировать ваш учет уже сегодня!</p>
 
       <form onSubmit={handleSubmit}>
         <input

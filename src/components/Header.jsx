@@ -1,14 +1,19 @@
 import "./Header.css";
-import logo from "../assets/photo.png"; // путь к логотипу
+import heroImage from "../assets/image.png";
 
 export default function Header() {
   return (
     <section id="hero" className="hero">
-      <div className="hero-overlay hero-content">
-        <img src={logo} alt="ФИНГРАД логотип" className="hero-logo" />
+      <div className="hero-content">
         <div className="hero-text">
           <h1>Бухгалтерские услуги</h1>
-          <p>Ваши финансы — в порядке, документы — под контролем.</p>
+          <p>Ваши финансы — в порядке<br />документы — под контролем.</p>
+          <span className="shadow" aria-hidden="true"></span>
+        </div>
+        <div className="hero-image">
+          <div className="image-fade">
+            <img src={heroImage} alt="Рабочее место бухгалтера" />
+          </div>
         </div>
       </div>
     </section>

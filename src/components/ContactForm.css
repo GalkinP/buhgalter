@@ -54,17 +54,17 @@ input, textarea {
 }
 
 button {
-  background: #2c3e50;
+ background: var(--accent);  
   color: #fff;
   border: none;
   padding: 0.8rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ;
 }
 
 button:hover {
-  background: #34495e;
+  background: var(--accent-hover);  
 }
 
 .status {
@@ -72,3 +72,4 @@ button:hover {
   margin-top: 1rem;
   font-style: italic;
 }
+

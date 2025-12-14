@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import{HashLink} from "react-router-hash-link"
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -26,25 +28,18 @@ export default function Navbar() {
 
       <ul className={`tabs ${isOpen ? "open" : ""}`}>
         <li>
-          <a href="#hero" onClick={handleLinkClick}>
-            Главная
-          </a>
+          <HashLink smooth to="/#hero" onClick={handleLinkClick}>главная</HashLink>
         </li>
         <li>
-          <a href="#services" onClick={handleLinkClick}>
-            Услуги
-          </a>
+          <HashLink smooth to="/#services" onClick={handleLinkClick}>услуги</HashLink>
         </li>
+        {/* <li>
+         <HashLink smooth to='/#calendar' onClick={handleLinkClick}>календарь</HashLink>
+        </li> */}
         <li>
-          <a href="#calendar" onClick={handleLinkClick}>
-            Календарь
-          </a>
+          <HashLink smooth to="/#contact" onClick={handleLinkClick}>контакты</HashLink>
         </li>
-        <li>
-          <a href="#contact" onClick={handleLinkClick}>
-            Контакты
-          </a>
-        </li>
+        <li><Link to="/price" onClick={handleLinkClick}>Цены</Link></li>
       </ul>
     </nav>
   );

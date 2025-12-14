@@ -1,0 +1,20 @@
+.contact-section {
+  padding: 4rem 2rem;
+  background: var(--bg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* форма и календарь рядом */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* адаптивность */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* на мобильных в колонку */
+  }
+}

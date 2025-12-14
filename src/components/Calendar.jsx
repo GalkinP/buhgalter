@@ -107,8 +107,8 @@ export default function Calendar( {compact = false} ) {
       </div>
 
       <div className="legend">
-        <span className="workday-box"></span> Рабочий день
-        <span className="holiday-box"></span> Выходной / праздник
+        <span className="workday-box"></span> Рабочий день<br/>
+        <span className="holiday-box"></span> Выходной / праздник <br/>
         <span className="today-box"></span> Сегодня
       </div>
       </div>

@@ -1,18 +1,28 @@
 {
-  "name": "buh",
+  "name": "buh4you",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "2.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "serve -s dist -l $PORT"
+    "start": "node server.js",
+    "prod": "npm run build && npm run start",
+    "clean": "rm -rf dist",
+    "docker:build": "docker build -t my-app .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env my-app"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "axios": "^1.13.2",
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.10.1",
+    "react-router-hash-link": "^2.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
