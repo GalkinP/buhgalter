@@ -73,7 +73,7 @@ export default function Calendar( {compact = false} ) {
   return (
     <section id="calendar" className="calendar">
       <div className={`calendar ${compact ? 'calendar-compact' : ''}`}>
-      {/* <h2>Производственный календарь</h2> */}
+    
       <div className="calendar-header">
         <button onClick={prevMonth}>←</button>
         <span>

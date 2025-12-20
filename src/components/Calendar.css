@@ -8,6 +8,22 @@
   margin: 0 auto;
 }
 
+
+
+.calendar-header button:hover {
+  background-color: transparent;
+}
+.calendar-header button:focus,
+button:focus-visible {
+  outline: 3px solid transparent;
+}
+
+
+
+
+
+
+
 .calendar h4 {
   margin-bottom: 0.3rem;
   font-size: 0.85rem;

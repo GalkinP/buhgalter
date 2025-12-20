@@ -54,7 +54,7 @@
 /* Бургер */
 .burger {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -67,6 +67,12 @@
   .burger {
     display: block;
   }
+
+.navbar{
+  position: absolute;
+  
+}
+
 
   .tabs {
     display: flex;
@@ -98,15 +104,20 @@
   }
 
   .tabs li a {
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-    background: #f9f9f9;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+ 
+    background: none;
+    color: var(--text);
     border: none;
+    width: 100%;
   }
 
   .tabs li a:hover {
     background: var(--accent);
-    color: #fff;
+    color: #ffffff;
   }
 
   .tabs li:last-child a {

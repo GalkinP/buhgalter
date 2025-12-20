@@ -16,7 +16,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Бухгалтерская папка. Все права
             защищены.
           </p>
-          <p>Телефон: +7 (950) 007-82-33 | Email: info@accounting-folder.ru</p>
+          <p>Телефон: tel:+7-900-649-76-81 | Email: info.buch24@yandex.ru</p>
           <div className="contact-links">
         <a href="https://t.me/galkaaa84" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-telegram"></i> Telegram
@@ -24,7 +24,7 @@ export default function Footer() {
         <a href="https://wa.me/79500078233" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-whatsapp"></i> WhatsApp
         </a>
-        <a href="tel:+79500078233">
+        <a href="tel:+79006497681">
           <i className="fas fa-phone"></i> Позвонить
         </a>
       </div>
