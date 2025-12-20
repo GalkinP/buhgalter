@@ -7,7 +7,11 @@ export default function Header() {
       <div className="hero-content">
         <div className="hero-text">
           <h1>Бухгалтерские услуги</h1>
-          <p>Ваши финансы — в порядке<br />документы — под контролем.</p>
+          <p>
+            Ваши финансы — в порядке
+            <br />
+            документы — под контролем.
+          </p>
           <span className="shadow" aria-hidden="true"></span>
         </div>
         <div className="hero-image">
