@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://buh2you.ru/sitemap.xml
